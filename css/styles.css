@@ -128,14 +128,21 @@ ul    { list-style: none; }
     position: relative; overflow: hidden;
 }
 
-/* Subtle grid pattern overlay on red card */
-.bento-carousel::before {
-    content: '';
-    position: absolute; inset: 0; pointer-events: none;
-    background-image:
-        linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
-    background-size: 40px 40px;
+/* Per-slide background images with red gradient overlay */
+#slide0 {
+    background:
+        linear-gradient(90deg, rgba(180,10,15,.92) 0%, rgba(150,8,12,.78) 45%, rgba(90,3,8,.5) 100%),
+        url('../images/carousel1.png') center / cover no-repeat;
+}
+#slide1 {
+    background:
+        linear-gradient(90deg, rgba(180,10,15,.92) 0%, rgba(150,8,12,.78) 45%, rgba(90,3,8,.5) 100%),
+        url('../images/carousel2.png') center / cover no-repeat;
+}
+#slide2 {
+    background:
+        linear-gradient(90deg, rgba(180,10,15,.92) 0%, rgba(150,8,12,.78) 45%, rgba(90,3,8,.5) 100%),
+        url('../images/carousel3.png') center / cover no-repeat;
 }
 
 /* Slides — stacked, fade in/out */
@@ -147,12 +154,8 @@ ul    { list-style: none; }
 }
 .slide.active { opacity: 1; pointer-events: auto; }
 
-/* Decorative circles (white on red) */
-.slide-bg-art { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
-.art-circle { position: absolute; border-radius: 50%; border: 1px solid rgba(255,255,255,.12); animation: pulsering 5s ease-in-out infinite; }
-.c1 { width: 600px; height: 600px; top: -180px; right: -120px; }
-.c2 { width: 380px; height: 380px; top: -30px; right: 60px; animation-delay: .8s; border-color: rgba(255,255,255,.07); }
-.c3 { width: 200px; height: 200px; top: 90px; right: 200px; animation-delay: 1.6s; border-color: rgba(255,255,255,.05); }
+/* Decorative circles — hidden when background images are used */
+.slide-bg-art { display: none; }
 @keyframes pulsering { 0%,100%{transform:scale(1);opacity:1} 50%{transform:scale(1.05);opacity:.5} }
 
 /* Slide inner — split layout */
