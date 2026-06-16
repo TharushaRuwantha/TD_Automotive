@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TD Automotive – Batteries & Rescue</title>
-    <meta name="description" content="TD Automotive — on-call battery specialists. Supply, fitting, mobile installation and emergency roadside rescue across the Western Province.">
+    <title>TD Automotive – Vehicle Battery Specialists</title>
+    <meta name="description" content="TD Automotive — your trusted vehicle battery specialists. Supply, installation, charging, and on-site mobile service for all vehicle types.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -17,318 +17,224 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#home" class="nav-logo">
-                <div class="logo-icon">TD</div>
-                <div class="logo-text">
-                    <span class="logo-name">TD Automotive</span>
-                    <span class="logo-sub">Batteries &amp; Rescue</span>
-                </div>
+                <span class="logo-td">TD</span>
+                <span class="logo-auto">Automotive</span>
             </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#services">Roadside Dispatch</a></li>
-                <li><a href="#products">Brands &amp; Products</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#brands">Brands</a></li>
                 <li><a href="#find">Battery Finder</a></li>
+                <li><a href="#contact" class="nav-cta">Contact Us</a></li>
             </ul>
-            <div class="nav-right">
-                <div class="on-call-badge">
-                    <span class="pulse-dot"></span> On-Call 24/7
-                </div>
-                <a href="tel:+94XXXXXXXXX" class="btn-call">
-                    <i class="fas fa-phone"></i> Call Now
-                </a>
-                <button class="nav-toggle" id="navToggle" aria-label="Menu">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
         </div>
     </nav>
 
-    <!-- ====== HERO BENTO ====== -->
-    <section class="hero-section" id="home">
-        <div class="bento-grid">
+    <!-- ====== HERO CAROUSEL ====== -->
+    <section class="hero" id="home">
 
-            <!-- LEFT: Red Carousel Card -->
-            <div class="bento-carousel" id="bentoCarousel">
-                <div class="carousel-slides" id="carouselSlides">
-
-                    <!-- Slide 1 -->
-                    <div class="c-slide active">
-                        <div class="slide-body">
-                            <span class="slide-chip"><i class="fas fa-wrench"></i> Authorized Dealer &amp; Free Diagnostics</span>
-                            <p class="slide-brands">BOSCH · VARTA · AMARON · OPTIMA · EXIDE &amp; MORE</p>
-                            <h1>Premium Brand<br>Warranties &amp; Fitting</h1>
-                            <p class="slide-desc">We supply high-purity lead-acid and AGM batteries backed by full manufacturer warranties. Prices vary by model — give us a call for a quick estimate.</p>
-                            <div class="slide-ctas">
-                                <a href="#products" class="btn btn-white">Browse Batteries</a>
-                                <a href="#find" class="btn btn-ghost-white">Instant Quote</a>
-                            </div>
-                        </div>
-                        <div class="slide-art">
-                            <div class="battery-card">
-                                <div class="bat-top">
-                                    <span class="bat-brand">VOLT X-TREME</span>
-                                    <span class="bat-type">AGM</span>
-                                </div>
-                                <div class="bat-body">
-                                    <i class="fas fa-car-battery bat-icon"></i>
-                                    <div class="bat-glow"></div>
-                                </div>
-                                <div class="bat-specs">
-                                    <span>12V</span><span>105Ah</span><span>950A CCA</span>
-                                </div>
-                                <div class="bat-bar">
-                                    <div class="bat-fill"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 2 -->
-                    <div class="c-slide">
-                        <div class="slide-body">
-                            <span class="slide-chip"><i class="fas fa-location-dot"></i> Mobile Service — We Come To You</span>
-                            <p class="slide-brands">HOME · OFFICE · ROADSIDE · ANYWHERE</p>
-                            <h1>On-Site Battery<br>Installation</h1>
-                            <p class="slide-desc">Dead battery anywhere in the Western Province? Our certified technicians arrive within the hour with pre-tested replacement stock ready to fit.</p>
-                            <div class="slide-ctas">
-                                <a href="#services" class="btn btn-white">Book a Visit</a>
-                                <a href="#contact" class="btn btn-ghost-white">Call Us Now</a>
-                            </div>
-                        </div>
-                        <div class="slide-art">
-                            <div class="battery-card dispatch-card">
-                                <div class="dispatch-icon"><i class="fas fa-truck-fast"></i></div>
-                                <div class="dispatch-eta">
-                                    <span class="eta-num">25</span>
-                                    <span class="eta-label">MIN<br>RESPONSE</span>
-                                </div>
-                                <p class="dispatch-text">Mobile unit on standby</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 3 -->
-                    <div class="c-slide">
-                        <div class="slide-body">
-                            <span class="slide-chip"><i class="fas fa-stethoscope"></i> Professional Testing &amp; Diagnostics</span>
-                            <p class="slide-brands">CHARGE TEST · LOAD TEST · HEALTH CHECK</p>
-                            <h1>Know Before<br>You Replace</h1>
-                            <p class="slide-desc">Not every flat battery needs replacing. We test your electrical system, alternator, and starter motor to find the real issue and save you money.</p>
-                            <div class="slide-ctas">
-                                <a href="#find" class="btn btn-white">Find My Battery</a>
-                                <a href="#contact" class="btn btn-ghost-white">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="slide-art">
-                            <div class="battery-card test-card">
-                                <div class="test-dial">
-                                    <svg viewBox="0 0 120 120" class="dial-svg">
-                                        <circle cx="60" cy="60" r="50" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="10"/>
-                                        <circle cx="60" cy="60" r="50" fill="none" stroke="white" stroke-width="10" stroke-dasharray="220 314" stroke-dashoffset="-25" stroke-linecap="round"/>
-                                        <text x="60" y="58" text-anchor="middle" fill="white" font-size="22" font-weight="700" font-family="Poppins,sans-serif">84%</text>
-                                        <text x="60" y="76" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-size="9" font-family="Poppins,sans-serif">HEALTH</text>
-                                    </svg>
-                                </div>
-                                <p class="test-label">Battery Health Score</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Carousel controls -->
-                <div class="carousel-footer">
-                    <div class="c-dots" id="cDots">
-                        <span class="c-dot active" data-idx="0"></span>
-                        <span class="c-dot" data-idx="1"></span>
-                        <span class="c-dot" data-idx="2"></span>
-                    </div>
-                    <div class="c-arrows">
-                        <button class="c-arrow" id="cPrev" aria-label="Prev"><i class="fas fa-arrow-left"></i></button>
-                        <button class="c-arrow" id="cNext" aria-label="Next"><i class="fas fa-arrow-right"></i></button>
-                    </div>
-                </div>
+        <!-- Slide 1 -->
+        <div class="slide slide-1 active" id="slide0">
+            <div class="slide-bg-art">
+                <div class="art-circle c1"></div>
+                <div class="art-circle c2"></div>
+                <div class="art-circle c3"></div>
             </div>
-
-            <!-- TOP RIGHT: Blue Dispatch Card (static) -->
-            <div class="bento-dispatch">
-                <div class="dispatch-header">
-                    <span class="dispatch-status"><span class="live-dot"></span> Active Dispatch Squad</span>
-                    <i class="fas fa-bolt dispatch-bolt"></i>
-                </div>
-                <h2>Stranded<br>on the Road?</h2>
-                <p>Skip towing fees. Our mobile team responds in 25 minutes with premium, pre-tested batteries.</p>
-                <div class="dispatch-hotline">
-                    <div>
-                        <span class="hotline-label">24H Hotline Dispatch</span>
-                        <span class="hotline-num">+94 XX XXX XXXX</span>
-                    </div>
-                    <a href="tel:+94XXXXXXXXX" class="dial-btn">
-                        <i class="fas fa-phone"></i> Dial
-                    </a>
-                </div>
-            </div>
-
-            <!-- BOTTOM RIGHT: Standards Card (static) -->
-            <div class="bento-standards">
-                <div class="standards-head">
-                    <span>Certified Site Standards</span>
-                    <i class="fas fa-shield-halved"></i>
-                </div>
-                <ul class="standards-list">
-                    <li>
-                        <div class="std-check"><i class="fas fa-check"></i></div>
-                        <div>
-                            <strong>Professional OBD Re-Registration</strong>
-                            <p>Calibrates your car's computer to prevent alternator overcharging.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="std-check"><i class="fas fa-check"></i></div>
-                        <div>
-                            <strong>ECU Memory-Saver Swaps</strong>
-                            <p>Retains radio codes, dashboard settings, and custom memory.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="std-check"><i class="fas fa-check"></i></div>
-                        <div>
-                            <strong>Warranty-Backed Installation</strong>
-                            <p>Every fitting is covered. Manufacturer warranty applied on-site.</p>
-                        </div>
-                    </li>
-                </ul>
-                <div class="standards-foot">
-                    <span>100% Genuine Certified</span>
-                    <a href="#services">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- ====== FIND YOUR BATTERY ====== -->
-    <section class="section finder-section" id="find">
-        <div class="container">
-            <div class="finder-wrap">
-                <div class="finder-left fade-in">
-                    <span class="section-tag">Battery Finder Tool</span>
-                    <h2 class="section-title">Find the Right Battery<br><span class="hl">for Your Vehicle</span></h2>
-                    <p>Select your vehicle type, enter your model, and we'll connect you directly on WhatsApp with the right recommendation and live pricing.</p>
-                    <div class="finder-perks">
-                        <div class="perk"><i class="fas fa-bolt"></i> Instant WhatsApp response</div>
-                        <div class="perk"><i class="fas fa-tags"></i> Live pricing check</div>
-                        <div class="perk"><i class="fas fa-truck"></i> Same-day delivery & fitting</div>
+            <div class="slide-overlay"></div>
+            <div class="slide-inner">
+                <div class="slide-body">
+                    <span class="slide-chip"><i class="fas fa-certificate"></i> Authorized Dealer &amp; Free Diagnostics</span>
+                    <p class="slide-brands">BOSCH &nbsp;·&nbsp; VARTA &nbsp;·&nbsp; AMARON &nbsp;·&nbsp; OPTIMA &nbsp;·&nbsp; EXIDE &amp; MORE</p>
+                    <h1>Premium Brand<br><span class="hl">Warranties &amp; Fitting</span></h1>
+                    <p class="slide-desc">We supply high-purity lead-acid and AGM batteries backed by full manufacturer warranties. Prices vary by model — give us a call for an estimate.</p>
+                    <div class="slide-btns">
+                        <a href="#products" class="btn btn-primary">Browse Batteries</a>
+                        <a href="#find" class="btn btn-ghost">Get a Quote</a>
                     </div>
                 </div>
-                <div class="finder-right fade-in">
-                    <div class="finder-card">
-                        <h3>Select Your Vehicle Type</h3>
-                        <div class="vehicle-grid" id="vehicleGrid">
-                            <label class="vcard">
-                                <input type="radio" name="vtype" value="Car / SUV">
-                                <div class="vcard-inner"><span class="vemoji">🚗</span><span>Car / SUV</span></div>
-                            </label>
-                            <label class="vcard">
-                                <input type="radio" name="vtype" value="Truck / Van">
-                                <div class="vcard-inner"><span class="vemoji">🚛</span><span>Truck / Van</span></div>
-                            </label>
-                            <label class="vcard">
-                                <input type="radio" name="vtype" value="Motorcycle / Scooter">
-                                <div class="vcard-inner"><span class="vemoji">🏍️</span><span>Motorcycle</span></div>
-                            </label>
-                            <label class="vcard">
-                                <input type="radio" name="vtype" value="Three-Wheeler / Tuk-Tuk">
-                                <div class="vcard-inner"><span class="vemoji">🛺</span><span>Three-Wheeler</span></div>
-                            </label>
+                <div class="slide-visual">
+                    <div class="sv-card">
+                        <div class="svc-top">
+                            <span class="svc-label">VOLT X-TREME</span>
+                            <span class="svc-badge">AGM</span>
                         </div>
-                        <input type="text" id="vehicleModel" class="finder-input" placeholder="Vehicle make &amp; model (e.g. Toyota Corolla 2018)">
-                        <div class="finder-btns">
-                            <button class="btn btn-whatsapp" id="waFinderBtn">
-                                <i class="fab fa-whatsapp"></i> Ask on WhatsApp
-                            </button>
-                            <a href="tel:+94XXXXXXXXX" class="btn btn-outline-dark">
-                                <i class="fas fa-phone"></i> Call for Quote
-                            </a>
+                        <div class="svc-icon-wrap">
+                            <i class="fas fa-car-battery svc-main-icon"></i>
+                            <div class="svc-glow"></div>
+                        </div>
+                        <div class="svc-specs">
+                            <div class="spec-item"><span class="spec-val">12V</span><span class="spec-key">Voltage</span></div>
+                            <div class="spec-item"><span class="spec-val">105Ah</span><span class="spec-key">Capacity</span></div>
+                            <div class="spec-item"><span class="spec-val">950A</span><span class="spec-key">CCA</span></div>
+                        </div>
+                        <div class="svc-bar-wrap">
+                            <div class="svc-bar-label">
+                                <span>Battery Level</span><span>75%</span>
+                            </div>
+                            <div class="svc-bar"><div class="svc-fill" style="width:75%"></div></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Slide 2 -->
+        <div class="slide slide-2" id="slide1">
+            <div class="slide-bg-art">
+                <div class="art-circle c1"></div>
+                <div class="art-circle c2"></div>
+                <div class="art-circle c3"></div>
+            </div>
+            <div class="slide-overlay"></div>
+            <div class="slide-inner">
+                <div class="slide-body">
+                    <span class="slide-chip"><i class="fas fa-location-dot"></i> Mobile Service — We Come To You</span>
+                    <p class="slide-brands">HOME &nbsp;·&nbsp; OFFICE &nbsp;·&nbsp; ROADSIDE &nbsp;·&nbsp; ANYWHERE</p>
+                    <h1>On-Site Battery<br><span class="hl">Installation</span></h1>
+                    <p class="slide-desc">Stuck with a dead battery? Our certified technicians travel to your location with pre-tested stock and fit it on the spot — no towing needed.</p>
+                    <div class="slide-btns">
+                        <a href="#services" class="btn btn-primary">Book a Visit</a>
+                        <a href="#contact" class="btn btn-ghost">Call Us Now</a>
+                    </div>
+                </div>
+                <div class="slide-visual">
+                    <div class="sv-card dispatch-sv">
+                        <div class="dsv-status"><span class="live-dot"></span> Active Dispatch</div>
+                        <div class="dsv-truck"><i class="fas fa-truck-fast"></i></div>
+                        <div class="dsv-eta">
+                            <span class="eta-big">25</span>
+                            <div class="eta-text"><strong>MIN</strong><span>Response</span></div>
+                        </div>
+                        <div class="dsv-tags">
+                            <span><i class="fas fa-check"></i> No towing fees</span>
+                            <span><i class="fas fa-check"></i> Pre-tested stock</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide slide-3" id="slide2">
+            <div class="slide-bg-art">
+                <div class="art-circle c1"></div>
+                <div class="art-circle c2"></div>
+                <div class="art-circle c3"></div>
+            </div>
+            <div class="slide-overlay"></div>
+            <div class="slide-inner">
+                <div class="slide-body">
+                    <span class="slide-chip"><i class="fas fa-stethoscope"></i> Professional Testing &amp; Diagnostics</span>
+                    <p class="slide-brands">CHARGE TEST &nbsp;·&nbsp; LOAD TEST &nbsp;·&nbsp; HEALTH CHECK</p>
+                    <h1>Know Before<br><span class="hl">You Replace</span></h1>
+                    <p class="slide-desc">Not every flat battery needs replacing. We test your electrical system, alternator, and starter motor to find the real issue and save you money.</p>
+                    <div class="slide-btns">
+                        <a href="#find" class="btn btn-primary">Find My Battery</a>
+                        <a href="#contact" class="btn btn-ghost">Learn More</a>
+                    </div>
+                </div>
+                <div class="slide-visual">
+                    <div class="sv-card health-sv">
+                        <p class="health-title">Battery Health Score</p>
+                        <div class="health-dial">
+                            <svg viewBox="0 0 120 120">
+                                <circle cx="60" cy="60" r="48" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="10"/>
+                                <circle cx="60" cy="60" r="48" fill="none" stroke="#e31e24" stroke-width="10"
+                                        stroke-dasharray="211 301" stroke-dashoffset="-25" stroke-linecap="round"/>
+                                <text x="60" y="55" text-anchor="middle" fill="white" font-size="22" font-weight="800" font-family="Poppins,sans-serif">84%</text>
+                                <text x="60" y="72" text-anchor="middle" fill="rgba(255,255,255,0.55)" font-size="9" font-family="Poppins,sans-serif">GOOD HEALTH</text>
+                            </svg>
+                        </div>
+                        <div class="health-checks">
+                            <div class="hc"><i class="fas fa-circle-check"></i> Alternator — OK</div>
+                            <div class="hc"><i class="fas fa-circle-check"></i> Starter — OK</div>
+                            <div class="hc hc-warn"><i class="fas fa-circle-exclamation"></i> Cell voltage — Low</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-btn prev" id="prevBtn" aria-label="Previous">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+        <button class="carousel-btn next" id="nextBtn" aria-label="Next">
+            <i class="fas fa-arrow-right"></i>
+        </button>
+        <div class="carousel-dots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+        </div>
+
     </section>
+
+    <!-- ====== STATS BAR ====== -->
+    <div class="stats-bar">
+        <div class="stats-inner">
+            <div class="stat"><i class="fas fa-battery-full"></i><div><strong>500+</strong><span>Batteries Installed</span></div></div>
+            <div class="stat-div"></div>
+            <div class="stat"><i class="fas fa-car"></i><div><strong>All Types</strong><span>Cars, Trucks &amp; Bikes</span></div></div>
+            <div class="stat-div"></div>
+            <div class="stat"><i class="fas fa-location-dot"></i><div><strong>Mobile</strong><span>On-Site Service</span></div></div>
+            <div class="stat-div"></div>
+            <div class="stat"><i class="fas fa-shield-halved"></i><div><strong>Warranty</strong><span>On All Products</span></div></div>
+        </div>
+    </div>
 
     <!-- ====== ABOUT ====== -->
     <section class="section about" id="about">
         <div class="container">
             <div class="about-grid">
                 <div class="about-visual fade-in">
-                    <div class="about-main-card">
-                        <div class="amc-icon"><i class="fas fa-car-battery"></i></div>
-                        <div class="amc-floater f1"><i class="fas fa-bolt"></i> Fast Response</div>
-                        <div class="amc-floater f2"><i class="fas fa-shield-halved"></i> Warranty</div>
-                        <div class="amc-badge"><i class="fas fa-award"></i><span>Trusted<br>Experts</span></div>
+                    <div class="about-card-main">
+                        <div class="about-icon-bg"><i class="fas fa-car-battery"></i></div>
+                        <div class="about-floater f1"><i class="fas fa-bolt"></i> Fast Service</div>
+                        <div class="about-floater f2"><i class="fas fa-shield-halved"></i> Warranty</div>
+                        <div class="about-badge"><i class="fas fa-award"></i><span>Trusted<br>Experts</span></div>
                     </div>
-                    <div class="about-accent-box"></div>
+                    <div class="about-card-accent"></div>
                 </div>
                 <div class="about-content fade-in">
                     <span class="section-tag">About TD Automotive</span>
                     <h2 class="section-title">Your Local Battery <span class="hl">Specialists</span></h2>
                     <p>TD Automotive is a dedicated vehicle battery service provider. We supply, install, and maintain batteries for all vehicle types — from everyday cars and motorbikes to commercial trucks and fleet vehicles.</p>
-                    <p>What sets us apart is our <strong>mobile on-site service</strong>. We come to you — no towing, no hassle. Just one call and our team handles everything at your location.</p>
+                    <p>What sets us apart is our <strong>mobile on-site service</strong>. We come to your home, office, or wherever you're stranded. No towing required — just call and we handle everything on the spot.</p>
                     <div class="about-feats">
                         <div class="feat"><i class="fas fa-circle-check"></i><span>Experienced battery technicians</span></div>
                         <div class="feat"><i class="fas fa-circle-check"></i><span>All major brands in stock</span></div>
                         <div class="feat"><i class="fas fa-circle-check"></i><span>Mobile on-site installation</span></div>
-                        <div class="feat"><i class="fas fa-circle-check"></i><span>Transparent honest pricing</span></div>
+                        <div class="feat"><i class="fas fa-circle-check"></i><span>Transparent, honest pricing</span></div>
                         <div class="feat"><i class="fas fa-circle-check"></i><span>Old battery disposal handled</span></div>
                         <div class="feat"><i class="fas fa-circle-check"></i><span>All vehicle types covered</span></div>
                     </div>
-                    <a href="#find" class="btn btn-blue">Find My Battery</a>
+                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ====== SERVICES ====== -->
-    <section class="section services" id="services">
+    <section class="section section-dark services" id="services">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Roadside Dispatch & Services</span>
-                <h2 class="section-title">What We <span class="hl">Offer</span></h2>
-                <p>From emergency roadside rescue to fleet battery management — your battery needs, fully covered.</p>
+                <span class="section-tag">What We Do</span>
+                <h2 class="section-title">Our <span class="hl">Services</span></h2>
+                <p>From supply to installation to emergency assistance — your battery needs, fully covered.</p>
             </div>
             <div class="services-grid">
-                <div class="svc-card fade-in">
-                    <div class="svc-ico"><i class="fas fa-battery-full"></i></div>
-                    <h3>Supply &amp; Installation</h3>
-                    <p>Genuine batteries from top brands, professionally fitted in all car, truck, and bike models.</p>
-                </div>
-                <div class="svc-card fade-in">
-                    <div class="svc-ico"><i class="fas fa-location-dot"></i></div>
-                    <h3>On-Site Mobile Service</h3>
-                    <p>We travel to you — home, office, or roadside. Bring tools and stock. You don't move an inch.</p>
-                </div>
-                <div class="svc-card fade-in">
-                    <div class="svc-ico"><i class="fas fa-plug"></i></div>
-                    <h3>Battery Charging</h3>
-                    <p>Battery drained but still good? Professional charge and restore to extend service life.</p>
-                </div>
-                <div class="svc-card fade-in">
-                    <div class="svc-ico"><i class="fas fa-stethoscope"></i></div>
-                    <h3>Testing &amp; Diagnosis</h3>
-                    <p>Full electrical system check — battery, alternator, and starter — before any recommendation.</p>
-                </div>
-                <div class="svc-card fade-in">
-                    <div class="svc-ico"><i class="fas fa-triangle-exclamation"></i></div>
-                    <h3>Emergency Rescue</h3>
-                    <p>Dead battery on the road? Fast emergency dispatch — 25-minute response across the province.</p>
-                </div>
-                <div class="svc-card fade-in">
-                    <div class="svc-ico"><i class="fas fa-truck-ramp-box"></i></div>
-                    <h3>Fleet Management</h3>
-                    <p>Bulk supply, scheduled maintenance, and battery plans for commercial fleets of any size.</p>
-                </div>
+                <div class="svc-card fade-in"><div class="svc-ico"><i class="fas fa-battery-full"></i></div><h3>Supply &amp; Installation</h3><p>Genuine batteries from top brands, professionally fitted in all car, truck, and bike models.</p></div>
+                <div class="svc-card fade-in"><div class="svc-ico"><i class="fas fa-location-dot"></i></div><h3>On-Site Mobile Service</h3><p>We travel to you — home, office, or roadside. Bring tools and stock. You don't move an inch.</p></div>
+                <div class="svc-card fade-in"><div class="svc-ico"><i class="fas fa-plug"></i></div><h3>Battery Charging</h3><p>Battery drained but still good? Professional charging to restore power and extend service life.</p></div>
+                <div class="svc-card fade-in"><div class="svc-ico"><i class="fas fa-stethoscope"></i></div><h3>Testing &amp; Diagnosis</h3><p>Full electrical system check — battery, alternator, and starter — before any recommendation.</p></div>
+                <div class="svc-card fade-in"><div class="svc-ico"><i class="fas fa-triangle-exclamation"></i></div><h3>Emergency Rescue</h3><p>Dead battery on the road? Fast emergency dispatch — 25-minute response across the province.</p></div>
+                <div class="svc-card fade-in"><div class="svc-ico"><i class="fas fa-truck-ramp-box"></i></div><h3>Fleet Management</h3><p>Bulk supply, scheduled maintenance, and battery plans for commercial fleets of any size.</p></div>
             </div>
         </div>
     </section>
@@ -337,8 +243,8 @@
     <section class="section products" id="products">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Brands &amp; Products</span>
-                <h2 class="section-title">What We <span class="hl">Stock</span></h2>
+                <span class="section-tag">What We Stock</span>
+                <h2 class="section-title">Our <span class="hl">Products</span></h2>
                 <p>Wide range of batteries for every vehicle type. <strong>Prices vary by brand — contact us for a live quote.</strong></p>
             </div>
             <div class="products-grid">
@@ -354,9 +260,7 @@
                     </ul>
                     <div class="product-footer">
                         <span class="call-price"><i class="fas fa-phone"></i> Call for pricing</span>
-                        <button class="wa-quick-btn" data-type="Car / SUV" data-product="Car Battery">
-                            <i class="fab fa-whatsapp"></i>
-                        </button>
+                        <button class="wa-quick-btn" data-type="Car / SUV" data-product="Car Battery"><i class="fab fa-whatsapp"></i></button>
                     </div>
                 </div>
 
@@ -372,9 +276,7 @@
                     </ul>
                     <div class="product-footer">
                         <span class="call-price"><i class="fas fa-phone"></i> Call for pricing</span>
-                        <button class="wa-quick-btn" data-type="Car / SUV" data-product="AGM / EFB Battery">
-                            <i class="fab fa-whatsapp"></i>
-                        </button>
+                        <button class="wa-quick-btn" data-type="Car / SUV" data-product="AGM / EFB Battery"><i class="fab fa-whatsapp"></i></button>
                     </div>
                 </div>
 
@@ -389,9 +291,7 @@
                     </ul>
                     <div class="product-footer">
                         <span class="call-price"><i class="fas fa-phone"></i> Call for pricing</span>
-                        <button class="wa-quick-btn" data-type="Truck / Van" data-product="Truck / Commercial Battery">
-                            <i class="fab fa-whatsapp"></i>
-                        </button>
+                        <button class="wa-quick-btn" data-type="Truck / Van" data-product="Truck Battery"><i class="fab fa-whatsapp"></i></button>
                     </div>
                 </div>
 
@@ -406,9 +306,7 @@
                     </ul>
                     <div class="product-footer">
                         <span class="call-price"><i class="fas fa-phone"></i> Call for pricing</span>
-                        <button class="wa-quick-btn" data-type="Motorcycle / Scooter" data-product="Motorbike Battery">
-                            <i class="fab fa-whatsapp"></i>
-                        </button>
+                        <button class="wa-quick-btn" data-type="Motorcycle" data-product="Motorbike Battery"><i class="fab fa-whatsapp"></i></button>
                     </div>
                 </div>
 
@@ -423,16 +321,14 @@
                     </ul>
                     <div class="product-footer">
                         <span class="call-price"><i class="fas fa-phone"></i> Call for pricing</span>
-                        <button class="wa-quick-btn" data-type="Other" data-product="Deep Cycle Battery">
-                            <i class="fab fa-whatsapp"></i>
-                        </button>
+                        <button class="wa-quick-btn" data-type="Other" data-product="Deep Cycle Battery"><i class="fab fa-whatsapp"></i></button>
                     </div>
                 </div>
 
                 <div class="product-card fade-in">
                     <div class="product-emoji">🔌</div>
                     <h3>Chargers &amp; Accessories</h3>
-                    <p>Smart chargers, jump starters, terminal protectors, and accessories to protect your investment.</p>
+                    <p>Smart chargers, jump starters, terminal protectors, and accessories to maintain your investment.</p>
                     <ul class="product-specs">
                         <li><i class="fas fa-check"></i> Smart chargers</li>
                         <li><i class="fas fa-check"></i> Jump cables</li>
@@ -440,27 +336,25 @@
                     </ul>
                     <div class="product-footer">
                         <span class="call-price"><i class="fas fa-phone"></i> Call for pricing</span>
-                        <button class="wa-quick-btn" data-type="Other" data-product="Battery Charger / Accessory">
-                            <i class="fab fa-whatsapp"></i>
-                        </button>
+                        <button class="wa-quick-btn" data-type="Other" data-product="Battery Charger / Accessory"><i class="fab fa-whatsapp"></i></button>
                     </div>
                 </div>
 
             </div>
-
             <div class="price-notice fade-in">
                 <i class="fas fa-info-circle"></i>
-                <p>Prices vary by brand, model &amp; spec. <a href="#find">Use the Battery Finder</a> or <a href="tel:+94XXXXXXXXX">call us</a> for the most accurate current quote. We'll match you to the right battery at the right price.</p>
+                <p>Prices vary by brand, model &amp; spec. <a href="#find">Use the Battery Finder</a> or <a href="tel:+94XXXXXXXXX">call us</a> for an accurate quote. We'll match you to the right battery at the right price.</p>
             </div>
         </div>
     </section>
 
     <!-- ====== BRANDS MARQUEE ====== -->
-    <section class="brands-section" id="brands">
+    <section class="section section-dark brands-section" id="brands">
         <div class="container">
-            <div class="section-header" style="margin-bottom:36px;">
+            <div class="section-header" style="margin-bottom:40px;">
                 <span class="section-tag">Brands We Carry</span>
                 <h2 class="section-title">Trusted <span class="hl">Brands</span></h2>
+                <p>We stock batteries from the world's leading manufacturers — quality you can count on.</p>
             </div>
         </div>
         <div class="marquee-wrap">
@@ -491,69 +385,68 @@
         </div>
     </section>
 
+    <!-- ====== BATTERY FINDER ====== -->
+    <section class="section finder-section" id="find">
+        <div class="container">
+            <div class="finder-wrap">
+                <div class="finder-left fade-in">
+                    <span class="section-tag">Battery Finder Tool</span>
+                    <h2 class="section-title">Find the Right Battery<br><span class="hl">for Your Vehicle</span></h2>
+                    <p>Select your vehicle type, enter your model, and we'll connect you directly on WhatsApp with the right recommendation and live pricing.</p>
+                    <div class="finder-perks">
+                        <div class="perk"><i class="fas fa-bolt"></i> Instant WhatsApp response</div>
+                        <div class="perk"><i class="fas fa-tags"></i> Live pricing check</div>
+                        <div class="perk"><i class="fas fa-truck"></i> Same-day delivery &amp; fitting</div>
+                    </div>
+                </div>
+                <div class="finder-right fade-in">
+                    <div class="finder-card">
+                        <h3>Select Your Vehicle Type</h3>
+                        <div class="vehicle-grid">
+                            <label class="vcard"><input type="radio" name="vtype" value="Car / SUV"><div class="vcard-inner"><span class="vemoji">🚗</span><span>Car / SUV</span></div></label>
+                            <label class="vcard"><input type="radio" name="vtype" value="Truck / Van"><div class="vcard-inner"><span class="vemoji">🚛</span><span>Truck / Van</span></div></label>
+                            <label class="vcard"><input type="radio" name="vtype" value="Motorcycle / Scooter"><div class="vcard-inner"><span class="vemoji">🏍️</span><span>Motorcycle</span></div></label>
+                            <label class="vcard"><input type="radio" name="vtype" value="Three-Wheeler"><div class="vcard-inner"><span class="vemoji">🛺</span><span>Three-Wheeler</span></div></label>
+                        </div>
+                        <input type="text" id="vehicleModel" class="finder-input" placeholder="Vehicle make &amp; model (e.g. Toyota Corolla 2018)">
+                        <div class="finder-btns">
+                            <button class="btn btn-wa" id="waFinderBtn"><i class="fab fa-whatsapp"></i> Ask on WhatsApp</button>
+                            <a href="tel:+94XXXXXXXXX" class="btn btn-outline-dark"><i class="fas fa-phone"></i> Call for Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ====== WHY CHOOSE US ====== -->
-    <section class="section why-us" id="why">
+    <section class="section section-dark why-us" id="why">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Why TD Automotive</span>
                 <h2 class="section-title">Why Choose <span class="hl">Us?</span></h2>
             </div>
             <div class="why-grid">
-                <div class="why-card fade-in">
-                    <div class="why-num">01</div>
-                    <div class="why-ico"><i class="fas fa-map-location-dot"></i></div>
-                    <h3>We Come to You</h3>
-                    <p>Our mobile team travels to your home, office, or wherever you're stranded — no towing required.</p>
-                </div>
-                <div class="why-card fade-in">
-                    <div class="why-num">02</div>
-                    <div class="why-ico"><i class="fas fa-bolt"></i></div>
-                    <h3>25-Min Response</h3>
-                    <p>Battery failures happen at the worst times. We respond fast and get you back on the road.</p>
-                </div>
-                <div class="why-card fade-in">
-                    <div class="why-num">03</div>
-                    <div class="why-ico"><i class="fas fa-tags"></i></div>
-                    <h3>Fair Pricing</h3>
-                    <p>No hidden fees. Honest upfront quotes. Prices differ by brand — we'll find one for your budget.</p>
-                </div>
-                <div class="why-card fade-in">
-                    <div class="why-num">04</div>
-                    <div class="why-ico"><i class="fas fa-medal"></i></div>
-                    <h3>Quality Guaranteed</h3>
-                    <p>Every battery is genuine and backed by full manufacturer warranty. We never compromise.</p>
-                </div>
+                <div class="why-card fade-in"><div class="why-num">01</div><div class="why-ico"><i class="fas fa-map-location-dot"></i></div><h3>We Come to You</h3><p>Our mobile team travels to your home, office, or wherever you're stranded — no towing required.</p></div>
+                <div class="why-card fade-in"><div class="why-num">02</div><div class="why-ico"><i class="fas fa-bolt"></i></div><h3>Fast Response</h3><p>Battery failures happen at the worst times. We respond fast and get you back on the road.</p></div>
+                <div class="why-card fade-in"><div class="why-num">03</div><div class="why-ico"><i class="fas fa-tags"></i></div><h3>Fair Pricing</h3><p>No hidden fees. Honest upfront quotes. Prices differ by brand — we'll find one for your budget.</p></div>
+                <div class="why-card fade-in"><div class="why-num">04</div><div class="why-ico"><i class="fas fa-medal"></i></div><h3>Quality Guaranteed</h3><p>Every battery is genuine and backed by full manufacturer warranty. We never compromise.</p></div>
             </div>
         </div>
     </section>
 
     <!-- ====== CONTACT ====== -->
-    <section class="section contact-section" id="contact">
+    <section class="section contact" id="contact">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Get In Touch</span>
                 <h2 class="section-title">Contact <span class="hl">Us</span></h2>
-                <p>Need a quote or want to book a service? Reach out any way that works for you.</p>
+                <p>Need a quote or want to book a service? Reach out — we're happy to help.</p>
             </div>
             <div class="contact-grid">
-                <div class="contact-card fade-in">
-                    <div class="cc-icon"><i class="fas fa-phone"></i></div>
-                    <h3>Call Us</h3>
-                    <p>Fastest way to get a quote or book. Prices vary by brand — we'll find the right fit.</p>
-                    <a href="tel:+94XXXXXXXXX" class="contact-link">+94 XX XXX XXXX</a>
-                </div>
-                <div class="contact-card fade-in">
-                    <div class="cc-icon"><i class="fab fa-whatsapp"></i></div>
-                    <h3>WhatsApp Us</h3>
-                    <p>Message us your vehicle details and we'll reply with the right recommendation.</p>
-                    <button class="contact-link wa-quick-msg" id="waContactBtn">Open WhatsApp Chat</button>
-                </div>
-                <div class="contact-card fade-in">
-                    <div class="cc-icon"><i class="fas fa-envelope"></i></div>
-                    <h3>Email</h3>
-                    <p>For bulk orders, fleet enquiries, or non-urgent questions — we respond promptly.</p>
-                    <a href="mailto:info@tdautomotive.lk" class="contact-link">info@tdautomotive.lk</a>
-                </div>
+                <div class="contact-card fade-in"><div class="cc-ico"><i class="fas fa-phone"></i></div><h3>Call Us</h3><p>Fastest way to get a quote or book. Prices vary by brand — we'll find the right fit.</p><a href="tel:+94XXXXXXXXX" class="contact-link">+94 XX XXX XXXX</a></div>
+                <div class="contact-card fade-in"><div class="cc-ico"><i class="fab fa-whatsapp"></i></div><h3>WhatsApp</h3><p>Message your vehicle details and we'll reply with the right recommendation instantly.</p><button class="contact-link" id="waContactBtn">Open WhatsApp Chat</button></div>
+                <div class="contact-card fade-in"><div class="cc-ico"><i class="fas fa-envelope"></i></div><h3>Email</h3><p>For bulk orders, fleet enquiries, or non-urgent questions — we respond promptly.</p><a href="mailto:info@tdautomotive.lk" class="contact-link">info@tdautomotive.lk</a></div>
             </div>
             <div class="service-area fade-in">
                 <i class="fas fa-map-pin"></i>
@@ -568,13 +461,9 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="#home" class="nav-logo" style="margin-bottom:16px;display:inline-flex;">
-                        <div class="logo-icon">TD</div>
-                        <div class="logo-text">
-                            <span class="logo-name">TD Automotive</span>
-                            <span class="logo-sub" style="color:#aaa;">Batteries &amp; Rescue</span>
-                        </div>
+                        <span class="logo-td">TD</span><span class="logo-auto">Automotive</span>
                     </a>
-                    <p>Your trusted on-call battery specialists. Supply, fitting, charging, and emergency rescue for all vehicle types.</p>
+                    <p>Your trusted on-call battery specialists. Supply, installation, charging, and mobile rescue for all vehicle types.</p>
                     <div class="social-links">
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -620,7 +509,7 @@
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Button -->
+    <!-- Floating WhatsApp -->
     <a class="wa-float" id="waFloat" href="#" aria-label="WhatsApp">
         <i class="fab fa-whatsapp"></i>
         <span class="wa-tooltip">Chat on WhatsApp</span>
