@@ -73,12 +73,14 @@ ul    { list-style: none; }
    ============================== */
 .navbar {
     position: fixed; top: 0; left: 0; right: 0; z-index: 900;
-    padding: 22px 0; transition: var(--trans);
+    padding: 16px 0; transition: var(--trans);
+    background: rgba(255,255,255,.97);
+    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0,0,0,.07);
+    box-shadow: 0 2px 16px rgba(0,0,0,.06);
 }
 .navbar.scrolled {
-    background: rgba(8,8,8,.95);
-    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-    padding: 14px 0; box-shadow: 0 2px 24px rgba(0,0,0,.4);
+    padding: 12px 0; box-shadow: 0 2px 24px rgba(0,0,0,.1);
 }
 .nav-container {
     max-width: 1200px; margin: 0 auto; padding: 0 24px;
@@ -86,16 +88,16 @@ ul    { list-style: none; }
 }
 .nav-logo { display: flex; align-items: center; gap: 7px; font-weight: 800; font-size: 1.35rem; cursor: pointer; }
 .logo-td   { background: var(--red); color: var(--white); padding: 3px 9px; border-radius: 6px; font-size: 1.2rem; line-height: 1.4; }
-.logo-auto { color: var(--white); font-weight: 700; letter-spacing: -.02em; }
+.logo-auto { color: var(--dark); font-weight: 700; letter-spacing: -.02em; }
 
 .nav-links { display: flex; align-items: center; gap: 4px; }
-.nav-links a { color: rgba(255,255,255,.8); padding: 7px 12px; border-radius: 8px; font-size: .86rem; font-weight: 500; transition: var(--trans); }
-.nav-links a:hover { color: var(--white); background: rgba(255,255,255,.08); }
+.nav-links a { color: #555; padding: 7px 12px; border-radius: 8px; font-size: .86rem; font-weight: 500; transition: var(--trans); }
+.nav-links a:hover { color: var(--dark); background: rgba(0,0,0,.05); }
 .nav-links .nav-cta { background: var(--red); color: var(--white); padding: 8px 18px; border-radius: 50px; margin-left: 8px; }
 .nav-links .nav-cta:hover { background: var(--red-dk); }
 
 .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; z-index: 1000; }
-.nav-toggle span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; transition: var(--trans); }
+.nav-toggle span { display: block; width: 24px; height: 2px; background: var(--dark); border-radius: 2px; transition: var(--trans); }
 .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .nav-toggle.open span:nth-child(2) { opacity: 0; }
 .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
