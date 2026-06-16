@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TD Automotive – Vehicle Battery Specialists</title>
+    <meta name="description" content="TD Automotive – your trusted vehicle battery specialists. Supply, installation, charging, and on-site mobile service for all vehicle types.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- ====== NAVBAR ====== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-td">TD</span>
+                <span class="logo-auto">Automotive</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#brands">Brands</a></li>
+                <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ====== HERO CAROUSEL ====== -->
+    <section class="hero" id="home">
+        <div class="carousel">
+            <div class="carousel-track" id="carouselTrack">
+
+                <!-- Slide 1 -->
+                <div class="slide slide-1">
+                    <div class="slide-bg-art">
+                        <div class="art-circle c1"></div>
+                        <div class="art-circle c2"></div>
+                        <div class="art-circle c3"></div>
+                        <div class="art-lines"></div>
+                        <div class="art-battery">
+                            <i class="fas fa-car-battery"></i>
+                        </div>
+                    </div>
+                    <div class="slide-overlay"></div>
+                    <div class="slide-inner">
+                        <div class="slide-content">
+                            <span class="slide-tag">Sri Lanka's Trusted Battery Experts</span>
+                            <h1>Power Your<br><span class="hl">Journey</span></h1>
+                            <p>Premium vehicle batteries supplied, installed and serviced at your doorstep. We bring the expertise to you.</p>
+                            <div class="slide-btns">
+                                <a href="#services" class="btn btn-primary">Our Services</a>
+                                <a href="#contact" class="btn btn-ghost">Call Us Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="slide slide-2">
+                    <div class="slide-bg-art">
+                        <div class="art-circle c1"></div>
+                        <div class="art-circle c2"></div>
+                        <div class="art-circle c3"></div>
+                        <div class="art-battery">
+                            <i class="fas fa-location-dot"></i>
+                        </div>
+                    </div>
+                    <div class="slide-overlay"></div>
+                    <div class="slide-inner">
+                        <div class="slide-content">
+                            <span class="slide-tag">Mobile Battery Service</span>
+                            <h1>We Come<br><span class="hl">To You</span></h1>
+                            <p>Stuck with a dead battery? Our technicians travel to your home, office, or roadside and get you back on the road fast.</p>
+                            <div class="slide-btns">
+                                <a href="#services" class="btn btn-primary">Learn More</a>
+                                <a href="#contact" class="btn btn-ghost">Book a Visit</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="slide slide-3">
+                    <div class="slide-bg-art">
+                        <div class="art-circle c1"></div>
+                        <div class="art-circle c2"></div>
+                        <div class="art-circle c3"></div>
+                        <div class="art-battery">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="slide-overlay"></div>
+                    <div class="slide-inner">
+                        <div class="slide-content">
+                            <span class="slide-tag">Top Brands Available</span>
+                            <h1>Quality You<br><span class="hl">Can Trust</span></h1>
+                            <p>We stock Amaron, Exide, Bosch, Varta and more — for cars, trucks, motorcycles and commercial vehicles.</p>
+                            <div class="slide-btns">
+                                <a href="#products" class="btn btn-primary">View Products</a>
+                                <a href="#brands" class="btn btn-ghost">Our Brands</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="carousel-btn prev" id="prevBtn" aria-label="Previous">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-btn next" id="nextBtn" aria-label="Next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+
+            <div class="carousel-dots" id="carouselDots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== STATS BAR ====== -->
+    <div class="stats-bar">
+        <div class="stats-inner">
+            <div class="stat fade-in">
+                <i class="fas fa-battery-full"></i>
+                <div><strong>500+</strong><span>Batteries Installed</span></div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat fade-in">
+                <i class="fas fa-car"></i>
+                <div><strong>All Types</strong><span>Cars, Trucks &amp; Bikes</span></div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat fade-in">
+                <i class="fas fa-location-dot"></i>
+                <div><strong>Mobile</strong><span>On-Site Service</span></div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat fade-in">
+                <i class="fas fa-shield-halved"></i>
+                <div><strong>Warranty</strong><span>On All Products</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====== ABOUT ====== -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-visual fade-in">
+                    <div class="about-card-main">
+                        <div class="about-icon-bg">
+                            <i class="fas fa-car-battery"></i>
+                        </div>
+                        <div class="about-floater f1">
+                            <i class="fas fa-bolt"></i>
+                            <span>Fast Service</span>
+                        </div>
+                        <div class="about-floater f2">
+                            <i class="fas fa-shield-halved"></i>
+                            <span>Warranty</span>
+                        </div>
+                        <div class="about-badge">
+                            <i class="fas fa-award"></i>
+                            <span>Trusted<br>Experts</span>
+                        </div>
+                    </div>
+                    <div class="about-card-accent"></div>
+                </div>
+                <div class="about-content fade-in">
+                    <span class="section-tag">About TD Automotive</span>
+                    <h2 class="section-title">Your Local Battery <span class="hl">Specialists</span></h2>
+                    <p>TD Automotive is a dedicated vehicle battery service provider. We supply, install, and maintain batteries for all vehicle types — from everyday cars and motorbikes to commercial trucks and fleet vehicles.</p>
+                    <p>What sets us apart is our <strong>mobile on-site service</strong>. We come to your home, office, or wherever you're stranded. No towing required — just call and we handle everything on the spot.</p>
+                    <div class="about-features">
+                        <div class="feat"><i class="fas fa-circle-check"></i><span>Experienced battery technicians</span></div>
+                        <div class="feat"><i class="fas fa-circle-check"></i><span>All major brands in stock</span></div>
+                        <div class="feat"><i class="fas fa-circle-check"></i><span>Mobile on-site installation</span></div>
+                        <div class="feat"><i class="fas fa-circle-check"></i><span>Transparent, honest pricing</span></div>
+                        <div class="feat"><i class="fas fa-circle-check"></i><span>Old battery disposal handled</span></div>
+                        <div class="feat"><i class="fas fa-circle-check"></i><span>All vehicle types covered</span></div>
+                    </div>
+                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== SERVICES ====== -->
+    <section class="section section-dark services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What We Do</span>
+                <h2 class="section-title">Our <span class="hl">Services</span></h2>
+                <p>From supply to installation to emergency assistance — your battery needs, fully covered.</p>
+            </div>
+            <div class="services-grid">
+
+                <div class="service-card fade-in">
+                    <div class="svc-icon"><i class="fas fa-battery-full"></i></div>
+                    <h3>Battery Supply &amp; Installation</h3>
+                    <p>We supply genuine, high-quality batteries from top brands and professionally install them — cars, SUVs, vans, trucks, and bikes.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="svc-icon"><i class="fas fa-location-dot"></i></div>
+                    <h3>On-Site Mobile Service</h3>
+                    <p>Our technicians travel to your location. We bring the tools and batteries so you don't have to move an inch. Home, office, or roadside.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="svc-icon"><i class="fas fa-plug"></i></div>
+                    <h3>Battery Charging</h3>
+                    <p>Battery drained but still functional? We offer professional charging services to restore power and extend your battery's service life.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="svc-icon"><i class="fas fa-stethoscope"></i></div>
+                    <h3>Battery Testing &amp; Diagnosis</h3>
+                    <p>Not sure if the battery is the problem? We perform thorough electrical system checks to find the root cause before recommending anything.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="svc-icon"><i class="fas fa-triangle-exclamation"></i></div>
+                    <h3>Emergency Roadside Assistance</h3>
+                    <p>Dead battery on the road? Call us. We provide fast emergency response and get you moving again with minimal wait time.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="svc-icon"><i class="fas fa-truck-ramp-box"></i></div>
+                    <h3>Fleet Battery Management</h3>
+                    <p>Running a fleet? We offer bulk supply, scheduled maintenance, and battery management plans to keep your entire fleet running.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== PRODUCTS ====== -->
+    <section class="section products" id="products">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What We Stock</span>
+                <h2 class="section-title">Our <span class="hl">Products</span></h2>
+                <p>A wide range of batteries for every vehicle type. Prices vary by brand and spec — <strong>call us for the best quote.</strong></p>
+            </div>
+            <div class="products-grid">
+
+                <div class="product-card fade-in">
+                    <div class="product-emoji">🚗</div>
+                    <h3>Car Batteries</h3>
+                    <p>Standard flooded and maintenance-free batteries for passenger cars and SUVs. Compatible with Japanese, European, and local vehicles.</p>
+                    <ul class="product-specs">
+                        <li><i class="fas fa-check"></i> Amaron, Exide, Bosch, Varta</li>
+                        <li><i class="fas fa-check"></i> 35Ah – 100Ah range</li>
+                        <li><i class="fas fa-check"></i> Manufacturer warranty</li>
+                    </ul>
+                    <div class="product-footer">
+                        <span class="call-price"><i class="fas fa-phone"></i> Call for current pricing</span>
+                    </div>
+                </div>
+
+                <div class="product-card featured fade-in">
+                    <div class="product-badge">Popular</div>
+                    <div class="product-emoji">⚙️</div>
+                    <h3>AGM &amp; EFB Batteries</h3>
+                    <p>Advanced Absorbent Glass Mat and Enhanced Flooded batteries for modern stop-start vehicles and high-demand electrical systems.</p>
+                    <ul class="product-specs">
+                        <li><i class="fas fa-check"></i> Bosch, Varta, Optima</li>
+                        <li><i class="fas fa-check"></i> Ideal for start-stop systems</li>
+                        <li><i class="fas fa-check"></i> Extended cycle life</li>
+                    </ul>
+                    <div class="product-footer">
+                        <span class="call-price"><i class="fas fa-phone"></i> Call for current pricing</span>
+                    </div>
+                </div>
+
+                <div class="product-card fade-in">
+                    <div class="product-emoji">🚛</div>
+                    <h3>Truck &amp; Commercial</h3>
+                    <p>Heavy-duty batteries for trucks, buses, lorries, and commercial vehicles with high CCA for reliable starts under load.</p>
+                    <ul class="product-specs">
+                        <li><i class="fas fa-check"></i> Exide, Amaron, ACDelco</li>
+                        <li><i class="fas fa-check"></i> 100Ah – 200Ah+</li>
+                        <li><i class="fas fa-check"></i> Heavy-duty build</li>
+                    </ul>
+                    <div class="product-footer">
+                        <span class="call-price"><i class="fas fa-phone"></i> Call for current pricing</span>
+                    </div>
+                </div>
+
+                <div class="product-card fade-in">
+                    <div class="product-emoji">🏍️</div>
+                    <h3>Motorbike Batteries</h3>
+                    <p>Compact, reliable batteries for motorcycles, scooters, and three-wheelers in both conventional and maintenance-free variants.</p>
+                    <ul class="product-specs">
+                        <li><i class="fas fa-check"></i> Yuasa, Amaron, Exide</li>
+                        <li><i class="fas fa-check"></i> All cc ranges covered</li>
+                        <li><i class="fas fa-check"></i> Quick installation</li>
+                    </ul>
+                    <div class="product-footer">
+                        <span class="call-price"><i class="fas fa-phone"></i> Call for current pricing</span>
+                    </div>
+                </div>
+
+                <div class="product-card fade-in">
+                    <div class="product-emoji">⚡</div>
+                    <h3>Deep Cycle Batteries</h3>
+                    <p>Designed for repeated deep discharging and recharging. Perfect for solar setups, marine use, and electric equipment.</p>
+                    <ul class="product-specs">
+                        <li><i class="fas fa-check"></i> Gel &amp; AGM variants</li>
+                        <li><i class="fas fa-check"></i> Solar system compatible</li>
+                        <li><i class="fas fa-check"></i> High cycle life</li>
+                    </ul>
+                    <div class="product-footer">
+                        <span class="call-price"><i class="fas fa-phone"></i> Call for current pricing</span>
+                    </div>
+                </div>
+
+                <div class="product-card fade-in">
+                    <div class="product-emoji">🔌</div>
+                    <h3>Chargers &amp; Accessories</h3>
+                    <p>Battery chargers, jump starters, terminal protectors, and accessories to maintain and protect your battery investment.</p>
+                    <ul class="product-specs">
+                        <li><i class="fas fa-check"></i> Smart chargers available</li>
+                        <li><i class="fas fa-check"></i> Jump start cables</li>
+                        <li><i class="fas fa-check"></i> Terminal care products</li>
+                    </ul>
+                    <div class="product-footer">
+                        <span class="call-price"><i class="fas fa-phone"></i> Call for current pricing</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="price-notice fade-in">
+                <i class="fas fa-info-circle"></i>
+                <p>Prices vary by brand, model, and specifications. Please <a href="#contact">contact us</a> for the most up-to-date pricing. We'll match the right battery to your vehicle and budget.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== BRANDS MARQUEE ====== -->
+    <section class="section section-dark brands-section" id="brands">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Brands We Carry</span>
+                <h2 class="section-title">Trusted <span class="hl">Brands</span></h2>
+                <p>We stock batteries from the world's leading manufacturers — quality you can count on.</p>
+            </div>
+        </div>
+        <div class="marquee-wrap">
+            <div class="marquee-fade left"></div>
+            <div class="marquee-fade right"></div>
+            <div class="marquee-track">
+                <div class="brand-pill"><i class="fas fa-bolt"></i> Amaron</div>
+                <div class="brand-pill"><i class="fas fa-bolt"></i> Exide</div>
+                <div class="brand-pill"><i class="fas fa-bolt"></i> Bosch</div>
+                <div class="brand-pill"><i class="fas fa-bolt"></i> Varta</div>
+                <div class="brand-pill"><i class="fas fa-bolt"></i> Optima</div>
+                <div class="brand-pill"><i class="fas fa-bolt"></i> ACDelco</div>
+                <div class="brand-pill"><i class="fas fa-bolt"></i> Yuasa</div>
+                <div class="brand-pill"><i class="fas fa-bolt"></i> Luminous</div>
+                <div class="brand-pill"><i class="fas fa-bolt"></i> Banner</div>
+                <div class="brand-pill"><i class="fas fa-bolt"></i> Hankook</div>
+                <!-- duplicate for seamless loop -->
+                <div class="brand-pill"><i class="fas fa-bolt"></i> Amaron</div>
+                <div class="brand-pill"><i class="fas fa-bolt"></i> Exide</div>
+                <div class="brand-pill"><i class="fas fa-bolt"></i> Bosch</div>
+                <div class="brand-pill"><i class="fas fa-bolt"></i> Varta</div>
+                <div class="brand-pill"><i class="fas fa-bolt"></i> Optima</div>
+                <div class="brand-pill"><i class="fas fa-bolt"></i> ACDelco</div>
+                <div class="brand-pill"><i class="fas fa-bolt"></i> Yuasa</div>
+                <div class="brand-pill"><i class="fas fa-bolt"></i> Luminous</div>
+                <div class="brand-pill"><i class="fas fa-bolt"></i> Banner</div>
+                <div class="brand-pill"><i class="fas fa-bolt"></i> Hankook</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== WHY CHOOSE US ====== -->
+    <section class="section why-us" id="why">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Why TD Automotive</span>
+                <h2 class="section-title">Why Choose <span class="hl">Us?</span></h2>
+            </div>
+            <div class="why-grid">
+
+                <div class="why-card fade-in">
+                    <div class="why-num">01</div>
+                    <div class="why-icon"><i class="fas fa-map-location-dot"></i></div>
+                    <h3>We Come to You</h3>
+                    <p>Our mobile team travels to your home, office, or wherever you're stranded — no towing, no hassle.</p>
+                </div>
+
+                <div class="why-card fade-in">
+                    <div class="why-num">02</div>
+                    <div class="why-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>Fast Response</h3>
+                    <p>Battery failures happen at the worst times. We're on standby to respond quickly and get you moving again.</p>
+                </div>
+
+                <div class="why-card fade-in">
+                    <div class="why-num">03</div>
+                    <div class="why-icon"><i class="fas fa-tags"></i></div>
+                    <h3>Fair Pricing</h3>
+                    <p>No hidden fees. Honest upfront quotes. Prices differ by brand — we'll always show you options that fit your budget.</p>
+                </div>
+
+                <div class="why-card fade-in">
+                    <div class="why-num">04</div>
+                    <div class="why-icon"><i class="fas fa-medal"></i></div>
+                    <h3>Quality Guaranteed</h3>
+                    <p>Every battery we sell is genuine and backed by manufacturer warranty. We don't compromise on quality.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== CONTACT ====== -->
+    <section class="section section-dark contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Contact <span class="hl">Us</span></h2>
+                <p>Need a quote, want to book a service, or just have a question? We're happy to help — give us a call.</p>
+            </div>
+            <div class="contact-grid">
+
+                <div class="contact-card fade-in">
+                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                    <h3>Call Us</h3>
+                    <p>The fastest way to get a quote or book a service. Prices vary by brand — call and we'll find the right fit for your vehicle.</p>
+                    <a href="tel:+94XXXXXXXXX" class="contact-link">+94 XX XXX XXXX</a>
+                </div>
+
+                <div class="contact-card fade-in">
+                    <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                    <h3>WhatsApp</h3>
+                    <p>Message us on WhatsApp for quick replies. Share your vehicle details and we'll recommend the right battery.</p>
+                    <a href="https://wa.me/94XXXXXXXXX" class="contact-link">Chat on WhatsApp</a>
+                </div>
+
+                <div class="contact-card fade-in">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <h3>Email</h3>
+                    <p>For bulk orders, fleet enquiries, or non-urgent questions, drop us an email and we'll respond promptly.</p>
+                    <a href="mailto:info@tdautomotive.lk" class="contact-link">info@tdautomotive.lk</a>
+                </div>
+
+            </div>
+
+            <div class="service-area fade-in">
+                <i class="fas fa-map-pin"></i>
+                <p>Currently serving the <strong>Western Province</strong> and surrounding areas. Contact us to confirm availability in your location.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#home" class="nav-logo" style="margin-bottom:16px; display:inline-flex;">
+                        <span class="logo-td">TD</span>
+                        <span class="logo-auto">Automotive</span>
+                    </a>
+                    <p>Your trusted vehicle battery specialists. Supply, installation, charging, and on-site mobile service for all vehicle types.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#brands">Brands</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li>Battery Supply &amp; Installation</li>
+                        <li>Mobile On-Site Service</li>
+                        <li>Battery Charging</li>
+                        <li>Battery Testing</li>
+                        <li>Emergency Assistance</li>
+                        <li>Fleet Management</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <div class="footer-contacts">
+                        <p><i class="fas fa-phone"></i> +94 XX XXX XXXX</p>
+                        <p><i class="fab fa-whatsapp"></i> WhatsApp Available</p>
+                        <p><i class="fas fa-envelope"></i> info@tdautomotive.lk</p>
+                        <p><i class="fas fa-clock"></i> Mon – Sat: 8 AM – 6 PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TD Automotive. All rights reserved.</p>
+                <p>Prices may vary — contact us for current rates.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to top -->
+    <button class="scroll-top" id="scrollTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
