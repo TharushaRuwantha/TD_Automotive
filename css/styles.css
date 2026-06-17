@@ -302,12 +302,14 @@ ul    { list-style: none; }
 
 .bento-card-top {
     grid-column: 2; grid-row: 1;
-    background: var(--dark);
+    background:
+        linear-gradient(135deg, rgba(0,0,0,.72) 0%, rgba(0,0,0,.55) 100%),
+        url('../images/blackbackground.jpg') center / cover no-repeat;
     padding: 26px 24px;
     display: flex; flex-direction: column; justify-content: space-between;
     color: white; position: relative; overflow: hidden;
 }
-/* Grid pattern on dark card */
+/* Subtle overlay on dark card */
 .bento-card-top::before {
     content: ''; position: absolute; inset: 0; pointer-events: none;
     background-image:
