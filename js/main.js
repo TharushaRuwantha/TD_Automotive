@@ -1,6 +1,6 @@
 'use strict';
 
-const WA_NUMBER = '94XXXXXXXXX'; // Replace with real WhatsApp number e.g. 94771234567
+const WA_NUMBER = '94707200033';
 
 // ==============================
 // CAROUSEL — fade + split-slide
