@@ -134,7 +134,7 @@ document.querySelectorAll('.wa-quick-btn').forEach(btn => {
 });
 
 // ==============================
-// SERVICES DECK — tap/click toggle
+// SERVICES DECK — fan on desktop, swipe stack on mobile
 // ==============================
 const svcDeck     = document.querySelector('.svc-deck');
 const deckHintTxt = document.querySelector('.deck-hint-text');
@@ -144,19 +144,89 @@ if (svcDeck) {
 
     if ('ontouchstart' in window && deckHintTxt) {
         deckHintTxt.textContent = isMobile()
-            ? 'Swipe to browse all services'
+            ? 'Swipe left or right to browse'
             : 'Tap to explore all services';
     }
 
+    // Desktop: click toggles fan; click outside closes
     svcDeck.addEventListener('click', () => {
         if (!isMobile()) svcDeck.classList.toggle('active');
     });
-
     document.addEventListener('click', e => {
-        if (!isMobile() && !svcDeck.contains(e.target)) {
-            svcDeck.classList.remove('active');
-        }
+        if (!isMobile() && !svcDeck.contains(e.target)) svcDeck.classList.remove('active');
     });
+
+    // Mobile: Tinder-style swipe-to-dismiss card stack
+    if (isMobile()) {
+        const cards = Array.from(svcDeck.querySelectorAll('.svc-dc'));
+        const total = cards.length;
+        let topIdx = 0, dragging = false, startX = 0, startY = 0;
+
+        function updateStack(animate, skipIdx) {
+            cards.forEach((card, i) => {
+                const rel = (i - topIdx + total) % total;
+                const doAnim = animate && i !== skipIdx;
+                card.style.transition = doAnim ? 'transform 0.35s ease, opacity 0.35s ease' : 'none';
+                if (rel === 0) {
+                    card.style.zIndex = total;
+                    card.style.transform = 'translateY(0) scale(1)';
+                    card.style.opacity = '1';
+                } else if (rel === 1) {
+                    card.style.zIndex = total - 1;
+                    card.style.transform = 'translateY(10px) scale(0.96)';
+                    card.style.opacity = '1';
+                } else if (rel === 2) {
+                    card.style.zIndex = total - 2;
+                    card.style.transform = 'translateY(18px) scale(0.92)';
+                    card.style.opacity = '1';
+                } else {
+                    card.style.zIndex = total - rel;
+                    card.style.transform = 'translateY(22px) scale(0.88)';
+                    card.style.opacity = '0';
+                }
+            });
+        }
+
+        updateStack(false);
+
+        svcDeck.addEventListener('touchstart', e => {
+            const target = e.target.closest('.svc-dc');
+            if (!target || target !== cards[topIdx]) return;
+            startX = e.touches[0].clientX;
+            startY = e.touches[0].clientY;
+            dragging = true;
+            cards[topIdx].style.transition = 'none';
+        }, { passive: true });
+
+        svcDeck.addEventListener('touchmove', e => {
+            if (!dragging) return;
+            const dx = e.touches[0].clientX - startX;
+            const dy = e.touches[0].clientY - startY;
+            cards[topIdx].style.transform = `translate(${dx}px,${dy * 0.4}px) rotate(${dx * 0.08}deg) scale(1)`;
+        }, { passive: true });
+
+        svcDeck.addEventListener('touchend', e => {
+            if (!dragging) return;
+            dragging = false;
+            const dx = e.changedTouches[0].clientX - startX;
+            if (Math.abs(dx) > 90) {
+                const dir = dx > 0 ? 1 : -1;
+                const swipedCard = cards[topIdx];
+                const swipedIdx = topIdx;
+                swipedCard.style.transition = 'transform 0.4s ease, opacity 0.35s ease';
+                swipedCard.style.transform = `translate(${dir * 450}px,-40px) rotate(${dir * 28}deg) scale(1)`;
+                swipedCard.style.opacity = '0';
+                setTimeout(() => {
+                    topIdx = (topIdx + 1) % total;
+                    updateStack(true, swipedIdx);
+                }, 420);
+            } else {
+                // Snap back
+                cards[topIdx].style.transition = 'transform 0.3s ease';
+                cards[topIdx].style.transform = 'translateY(0) scale(1)';
+            }
+        }, { passive: true });
+    }
 }
 
 // ==============================

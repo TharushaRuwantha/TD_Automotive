@@ -733,29 +733,24 @@ ul    { list-style: none; }
 
     /* Sections */
     .products-grid, .contact-grid { grid-template-columns: 1fr; }
-    /* Carousel layout — replaces deck fan on mobile */
-    .svc-deck-wrap { padding: 0 0 40px; }
+    /* Swipe-stack layout — replaces deck fan on mobile */
+    .svc-deck-wrap { padding: 30px 0 70px; display: flex; flex-direction: column; align-items: center; }
     .svc-deck {
-        display: flex;
-        width: 100%;
-        height: auto;
-        overflow-x: scroll;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-        gap: 14px;
-        padding-bottom: 10px;
+        display: block;
+        position: relative;
+        width: 270px;
+        height: 240px;
+        overflow: visible;
         cursor: auto;
     }
-    .svc-deck::-webkit-scrollbar { display: none; }
     .svc-dc {
-        position: relative;
-        flex: 0 0 82%;
-        max-width: 280px;
-        height: 220px;
-        scroll-snap-align: start;
-        transform: none !important;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0; left: 0;
+        will-change: transform;
     }
+    .deck-hint { margin-top: 30px; }
     .why-grid { grid-template-columns: 1fr; }
     .finder-wrap { grid-template-columns: 1fr; gap: 40px; }
     .footer-grid { grid-template-columns: 1fr; gap: 28px; }
@@ -780,6 +775,6 @@ ul    { list-style: none; }
     .stat { flex-direction: column; text-align: center; gap: 6px; }
     .stat i { font-size: 1.25rem; }
 
-    /* Slightly narrower cards on small phones */
-    .svc-dc { flex: 0 0 88%; }
+    /* Smaller stack on small phones */
+    .svc-deck { width: 240px; height: 220px; }
 }
