@@ -134,6 +134,28 @@ document.querySelectorAll('.wa-quick-btn').forEach(btn => {
 });
 
 // ==============================
+// SERVICES DECK — tap/click toggle
+// ==============================
+const svcDeck     = document.querySelector('.svc-deck');
+const deckHintTxt = document.querySelector('.deck-hint-text');
+
+if (svcDeck) {
+    if ('ontouchstart' in window && deckHintTxt) {
+        deckHintTxt.textContent = 'Tap to explore all services';
+    }
+
+    svcDeck.addEventListener('click', () => {
+        svcDeck.classList.toggle('active');
+    });
+
+    document.addEventListener('click', e => {
+        if (!svcDeck.contains(e.target)) {
+            svcDeck.classList.remove('active');
+        }
+    });
+}
+
+// ==============================
 // INTERSECTION OBSERVER — fade-in
 // ==============================
 const observer = new IntersectionObserver(entries => {

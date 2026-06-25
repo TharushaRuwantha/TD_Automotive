@@ -463,15 +463,15 @@ ul    { list-style: none; }
 .svc-dc h3 { color: var(--white); font-size: .82rem; font-weight: 700; margin-bottom: 8px; }
 .svc-dc p  { color: #888; font-size: .72rem; line-height: 1.55; }
 
-/* Fan out on deck hover */
-.svc-deck:hover .dc1 { transform: rotate(-42deg) translate(-140px,-18px); }
-.svc-deck:hover .dc2 { transform: rotate(-28deg) translate(-100px,-10px); }
-.svc-deck:hover .dc3 { transform: rotate(-14deg) translate(-55px, -5px); }
-.svc-deck:hover .dc4 { transform: rotate( -4deg) translate(-16px,-32px); }
-.svc-deck:hover .dc5 { transform: rotate(  4deg) translate( 16px,-32px); }
-.svc-deck:hover .dc6 { transform: rotate( 14deg) translate( 55px, -5px); }
-.svc-deck:hover .dc7 { transform: rotate( 28deg) translate(100px,-10px); }
-.svc-deck:hover .dc8 { transform: rotate( 42deg) translate(140px,-18px); }
+/* Fan out on deck hover or tap-active */
+.svc-deck:hover .dc1, .svc-deck.active .dc1 { transform: rotate(-42deg) translate(-140px,-18px); }
+.svc-deck:hover .dc2, .svc-deck.active .dc2 { transform: rotate(-28deg) translate(-100px,-10px); }
+.svc-deck:hover .dc3, .svc-deck.active .dc3 { transform: rotate(-14deg) translate(-55px, -5px); }
+.svc-deck:hover .dc4, .svc-deck.active .dc4 { transform: rotate( -4deg) translate(-16px,-32px); }
+.svc-deck:hover .dc5, .svc-deck.active .dc5 { transform: rotate(  4deg) translate( 16px,-32px); }
+.svc-deck:hover .dc6, .svc-deck.active .dc6 { transform: rotate( 14deg) translate( 55px, -5px); }
+.svc-deck:hover .dc7, .svc-deck.active .dc7 { transform: rotate( 28deg) translate(100px,-10px); }
+.svc-deck:hover .dc8, .svc-deck.active .dc8 { transform: rotate( 42deg) translate(140px,-18px); }
 
 /* Individual card pop on hover */
 .svc-dc:hover {
@@ -733,15 +733,15 @@ ul    { list-style: none; }
 
     /* Sections */
     .products-grid, .contact-grid { grid-template-columns: 1fr; }
-    /* Scale down deck fan on small screens */
-    .svc-deck:hover .dc1 { transform: rotate(-36deg) translate(-105px,-14px); }
-    .svc-deck:hover .dc2 { transform: rotate(-24deg) translate( -72px, -8px); }
-    .svc-deck:hover .dc3 { transform: rotate(-12deg) translate( -38px, -4px); }
-    .svc-deck:hover .dc4 { transform: rotate( -3deg) translate( -10px,-24px); }
-    .svc-deck:hover .dc5 { transform: rotate(  3deg) translate(  10px,-24px); }
-    .svc-deck:hover .dc6 { transform: rotate( 12deg) translate(  38px, -4px); }
-    .svc-deck:hover .dc7 { transform: rotate( 24deg) translate(  72px, -8px); }
-    .svc-deck:hover .dc8 { transform: rotate( 36deg) translate( 105px,-14px); }
+    /* Tighter deck fan for tablets/mobile */
+    .svc-deck:hover .dc1, .svc-deck.active .dc1 { transform: rotate(-28deg) translate(-85px,-12px); }
+    .svc-deck:hover .dc2, .svc-deck.active .dc2 { transform: rotate(-18deg) translate(-58px, -7px); }
+    .svc-deck:hover .dc3, .svc-deck.active .dc3 { transform: rotate( -9deg) translate(-30px, -3px); }
+    .svc-deck:hover .dc4, .svc-deck.active .dc4 { transform: rotate( -2deg) translate( -8px,-22px); }
+    .svc-deck:hover .dc5, .svc-deck.active .dc5 { transform: rotate(  2deg) translate(  8px,-22px); }
+    .svc-deck:hover .dc6, .svc-deck.active .dc6 { transform: rotate(  9deg) translate( 30px, -3px); }
+    .svc-deck:hover .dc7, .svc-deck.active .dc7 { transform: rotate( 18deg) translate( 58px, -7px); }
+    .svc-deck:hover .dc8, .svc-deck.active .dc8 { transform: rotate( 28deg) translate( 85px,-12px); }
     .why-grid { grid-template-columns: 1fr; }
     .finder-wrap { grid-template-columns: 1fr; gap: 40px; }
     .footer-grid { grid-template-columns: 1fr; gap: 28px; }
@@ -765,4 +765,14 @@ ul    { list-style: none; }
     .stats-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
     .stat { flex-direction: column; text-align: center; gap: 6px; }
     .stat i { font-size: 1.25rem; }
+
+    /* Extra-tight deck fan for small phones */
+    .svc-deck:hover .dc1, .svc-deck.active .dc1 { transform: rotate(-22deg) translate(-66px,-10px); }
+    .svc-deck:hover .dc2, .svc-deck.active .dc2 { transform: rotate(-14deg) translate(-44px, -6px); }
+    .svc-deck:hover .dc3, .svc-deck.active .dc3 { transform: rotate( -6deg) translate(-20px, -3px); }
+    .svc-deck:hover .dc4, .svc-deck.active .dc4 { transform: rotate( -1deg) translate( -5px,-18px); }
+    .svc-deck:hover .dc5, .svc-deck.active .dc5 { transform: rotate(  1deg) translate(  5px,-18px); }
+    .svc-deck:hover .dc6, .svc-deck.active .dc6 { transform: rotate(  6deg) translate( 20px, -3px); }
+    .svc-deck:hover .dc7, .svc-deck.active .dc7 { transform: rotate( 14deg) translate( 44px, -6px); }
+    .svc-deck:hover .dc8, .svc-deck.active .dc8 { transform: rotate( 22deg) translate( 66px,-10px); }
 }
