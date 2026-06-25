@@ -140,16 +140,20 @@ const svcDeck     = document.querySelector('.svc-deck');
 const deckHintTxt = document.querySelector('.deck-hint-text');
 
 if (svcDeck) {
+    const isMobile = () => window.innerWidth <= 768;
+
     if ('ontouchstart' in window && deckHintTxt) {
-        deckHintTxt.textContent = 'Tap to explore all services';
+        deckHintTxt.textContent = isMobile()
+            ? 'Swipe to browse all services'
+            : 'Tap to explore all services';
     }
 
     svcDeck.addEventListener('click', () => {
-        svcDeck.classList.toggle('active');
+        if (!isMobile()) svcDeck.classList.toggle('active');
     });
 
     document.addEventListener('click', e => {
-        if (!svcDeck.contains(e.target)) {
+        if (!isMobile() && !svcDeck.contains(e.target)) {
             svcDeck.classList.remove('active');
         }
     });
