@@ -690,6 +690,16 @@ ul    { list-style: none; }
     .section { padding: 64px 0; }
     .section-header { margin-bottom: 44px; }
 
+    /* Mobile logo — shrink & keep on one line so navbar height stays fixed
+       (a wrapped logo was pushing the navbar taller and cropping the hero) */
+    .nav-logo { min-width: 0; flex-shrink: 1; }
+    .logo-td { flex-shrink: 0; font-size: 1rem; padding: 3px 7px; }
+    .logo-auto {
+        font-size: .92rem;
+        white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+        min-width: 0; display: inline-block;
+    }
+
     /* Mobile nav — dark overlay, fix link colors */
     .nav-links {
         display: none; position: fixed; inset: 0;
