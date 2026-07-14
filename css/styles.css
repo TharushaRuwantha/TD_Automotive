@@ -732,6 +732,13 @@ ul    { list-style: none; }
        swipe + dots already cover navigation on touch devices, so hide them */
     .carousel-btn { display: none; }
 
+    /* On phone-height screens the hero cards sit in the first fold, so the
+       fixed WhatsApp button lands on top of the dispatch card's text.
+       Keep it hidden until the hero has been scrolled past (JS toggles
+       .visible), matching the existing scroll-top reveal pattern. */
+    .wa-float { opacity: 0; visibility: hidden; pointer-events: none; }
+    .wa-float.visible { opacity: 1; visibility: visible; pointer-events: auto; }
+
     /* Stats */
     .stats-inner { justify-content: center; gap: 16px; }
     .stat-div { display: none; }

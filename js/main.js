@@ -88,10 +88,19 @@ function openWhatsApp(msg) {
 
 const defaultMsg = () => `Hi TD Automotive! I'm interested in your battery services. Could you help me?`;
 
-document.getElementById('waFloat').addEventListener('click', e => {
+const waFloat = document.getElementById('waFloat');
+
+waFloat.addEventListener('click', e => {
     e.preventDefault();
     openWhatsApp(defaultMsg());
 });
+
+// On mobile the hero cards sit in the first fold, so the fixed WhatsApp
+// button would land on top of the dispatch card's text (hidden by CSS
+// until scrolled past — see .wa-float in the mobile media query).
+new IntersectionObserver(entries => {
+    entries.forEach(e => waFloat.classList.toggle('visible', !e.isIntersecting));
+}, { threshold: 0 }).observe(document.getElementById('home'));
 
 const waContactBtn = document.getElementById('waContactBtn');
 if (waContactBtn) {
