@@ -5,11 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TD Automotive Parts & Batteries – Vehicle Battery Specialists</title>
     <meta name="description" content="TD Automotive Parts & Batteries (Pvt) Ltd — Sri Lanka's premium automotive solutions provider. Battery supply, expert installation, emergency roadside service, and genuine spare parts in Maharagama and island-wide.">
+    <meta name="theme-color" content="#e31e24">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="TD Automotive Parts & Batteries">
+    <meta property="og:title" content="TD Automotive Parts & Batteries – Vehicle Battery Specialists">
+    <meta property="og:description" content="Sri Lanka's premium automotive solutions provider. Battery supply, expert installation, emergency roadside service, and genuine spare parts in Maharagama and island-wide.">
+    <meta property="og:image" content="images/carousel1.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TD Automotive Parts & Batteries – Vehicle Battery Specialists">
+    <meta name="twitter:description" content="Sri Lanka's premium automotive solutions provider. Battery supply, expert installation, emergency roadside service, and genuine spare parts in Maharagama and island-wide.">
+    <meta name="twitter:image" content="images/carousel1.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="apple-touch-icon" href="images/favicon.svg">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AutomotiveBusiness",
+        "name": "TD Automotive Parts & Batteries (Pvt) Ltd",
+        "image": "images/carousel1.png",
+        "telephone": "+94707200033",
+        "email": "tharaka.tdautomotive@gmail.com",
+        "priceRange": "$$",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "148/1, Piliyandala Road",
+            "addressLocality": "Maharagama",
+            "addressRegion": "Colombo District",
+            "addressCountry": "LK"
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+            "opens": "07:00",
+            "closes": "22:00"
+        },
+        "sameAs": [
+            "https://www.facebook.com/TDAutomotive?mibextid=wwXIfr",
+            "https://www.instagram.com/automotiveparts_battery?igsh=MTAwM3VqNnB6bDhlZw%3D%3D&utm_source=qr",
+            "https://www.tiktok.com/@automotive.parts.colombo"
+        ],
+        "areaServed": "Colombo District, Sri Lanka"
+    }
+    </script>
 </head>
 <body>
 
@@ -109,8 +158,8 @@
                 </div>
 
                 <!-- Carousel controls (inside the card) -->
-                <button class="" id="prevBtn" aria-label="Previous"></i></button>
-                <button class="" id="nextBtn" aria-label="Next"></i></button>
+                <button class="carousel-btn prev" id="prevBtn" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+                <button class="carousel-btn next" id="nextBtn" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
                 <div class="carousel-dots">
                     <span class="dot active" data-index="0"></span>
                     <span class="dot" data-index="1"></span>
